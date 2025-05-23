@@ -2,8 +2,8 @@
   "name": "config-packs",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@10.10.0",
-  "description": "",
+  "packageManager": "pnpm@10.11.0",
+  "description": "Template repo for `config-rocket` ecosystem config pack creators.",
   "author": "NamesMT <dangquoctrung123@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/namesmt/config-packs#readme",
@@ -12,15 +12,12 @@
     "url": "git+https://github.com/namesmt/config-packs.git"
   },
   "bugs": "https://github.com/namesmt/config-packs/issues",
-  "keywords": [],
   "engines": {
     "node": ">=20.13.1"
   },
   "scripts": {
-    "start": "tsx",
-    "watch": "tsx watch",
-    "dev": "pnpm run start --watch src/dev.ts",
-    "bundle": "pnpm run start src/bundle.ts",
+    "dev": "tsx --watch src/dev.ts",
+    "bundle": "tsx src/bundle.ts",
     "lint": "eslint .",
     "test:types": "tsc --noEmit",
     "release": "pnpm dlx changelogen@latest --release --push --publish",
@@ -28,16 +25,15 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.12.0",
-    "@namesmt/utils": "^0.5.10",
+    "@antfu/eslint-config": "^4.13.2",
+    "@namesmt/utils": "^0.5.13",
     "@parcel/watcher": "^2.5.1",
-    "@types/node": "^22.15.3",
-    "config-rocket": "^0.5.4",
+    "@types/node": "^22.15.21",
+    "config-rocket": "^0.6.2",
     "consola": "^3.4.2",
-    "eslint": "^9.26.0",
+    "eslint": "^9.27.0",
     "kontroll": "^1.0.5",
-    "lint-staged": "^15.5.1",
-    "nodemon": "^3.1.10",
+    "lint-staged": "^16.0.0",
     "pathe": "^2.0.3",
     "simple-git-hooks": "^2.13.0",
     "std-env": "^3.9.0",
@@ -52,7 +48,8 @@
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "esbuild",
-      "simple-git-hooks"
+      "simple-git-hooks",
+      "unrs-resolver"
     ]
   },
   "simple-git-hooks": {
